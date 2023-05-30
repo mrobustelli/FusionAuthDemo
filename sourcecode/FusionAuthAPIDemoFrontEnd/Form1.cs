@@ -17,7 +17,7 @@ namespace FusionDemo
 
         private async void btnCreateUser_Click(object sender, EventArgs e)
         {
-            //FusionAuthClient is a class that contains the logic to call the the FusionAuth APIs
+            //FusionAuthClient is a class that contains the logic to call the FusionAuth APIs
             var faClient = new FusionAuthClient();
 
             UserProperties userProperties = new UserProperties()
@@ -26,7 +26,7 @@ namespace FusionDemo
                 FirstName = txtFirstName.Text,
                 LastName = txtLastName.Text,
                 Password = txtPassword.Text
-                //add addititional properties here
+                //add additional properties here
             };
 
             User userToCreate = new User()
@@ -34,7 +34,7 @@ namespace FusionDemo
                 UserProperties = userProperties
             };
 
-            //preform custom validation logic in the IsUserValid method
+            //perform custom validation logic in the IsUserValid method
             if (IsUserValid(userToCreate))
             {
                 ReturnValue userCreatedReturnValue = await faClient.CreateUser(userToCreate);
@@ -75,7 +75,7 @@ namespace FusionDemo
 
         private async void btnAddUserToGroup_Click(object sender, EventArgs e)
         {
-            //FusionAuthClient is a class that contains the logic to call the the FusionAuth APIs
+            //FusionAuthClient is a class that contains the logic to call  the FusionAuth APIs
             var faClient = new FusionAuthClient();
 
             List<GroupUser> users = new List<GroupUser>()
@@ -94,7 +94,7 @@ namespace FusionDemo
             List<Group> groups = new List<Group>();
             groups.Add(group);
 
-            //preform custom validation logic here
+            //perform custom validation logic here
             if (IsGroupValid(group))
             {
                 ReturnValue addUserToGroupReturnValue = await faClient.AddUserToGroup(groups);
