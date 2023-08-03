@@ -1,4 +1,6 @@
 # FusionAuthDemo
+This is a work in progress and the Readme file needs to be updated.
+
 Sample windows form application utilizing the FusionAuth APIs in C#.
 
 This is a sample application written for a blog post that utilizes the FusionAuth APIs.
