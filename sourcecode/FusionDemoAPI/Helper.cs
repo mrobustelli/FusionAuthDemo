@@ -10,9 +10,6 @@ namespace FusionDemoAPI
 {
     public class Helper
     {
-        //<startuser>
-        //startuser
-        //tag::user[]
         //For User object
         public class User
         {
@@ -31,9 +28,6 @@ namespace FusionDemoAPI
             [JsonProperty(PropertyName = "password")]
             public string Password;
         }
-        //tag::user[]
-        //enduser
-        //<enduser>
         
         //For Group object
         public class Group
